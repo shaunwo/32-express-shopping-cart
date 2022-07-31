@@ -1,4 +1,4 @@
-# Express Shopping List
+# 32.2 Express Shopping List
 
 A simple JSON API application where we store a shopping list.  Each item is a JavaScript object with the keys of name, and price. This application has the following routes:
 
