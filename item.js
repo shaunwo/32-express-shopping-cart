@@ -2,14 +2,14 @@
 const items = require('./fakeDb');
 
 class Item {
-	// defining the items in the cart
+	// defining the items in the list
 	constructor(name, price) {
 		this.name = name;
 		this.price = price;
 		items.push(this);
 	}
 
-	// returning ALL the items in the car
+	// returning ALL the items in the list
 	static findAll() {
 		return items;
 	}
@@ -35,7 +35,7 @@ class Item {
 		return foundItem;
 	}
 
-	// removing an item from the cart, by name, and then by the index
+	// removing an item from the list, by name, and then by the index
 	static remove(name) {
 		let foundIdx = items.findIndex((v) => v.name === name);
 		if (foundIdx === -1) {

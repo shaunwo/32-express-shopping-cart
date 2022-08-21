@@ -2,7 +2,7 @@ const Item = require('../item');
 const express = require('express');
 const router = express.Router();
 
-// displaying all the items currently in the shopping cart
+// displaying all the items currently in the shopping list
 router.get('', function (req, res, next) {
 	try {
 		return res.json({ items: Item.findAll() });
@@ -11,7 +11,7 @@ router.get('', function (req, res, next) {
 	}
 });
 
-// adding a new item to the shopping cart
+// adding a new item to the shopping list
 router.post('', (req, res, next) => {
 	try {
 		let newItem = new Item(req.body.name, req.body.price);
